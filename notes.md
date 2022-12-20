@@ -12,7 +12,11 @@
   Next, let's look at *changes* to install scripts. What % of packages contain in their history these types of changes: 1) add install script, 2) delete install script, 3) change install script? 
   Let's manually examine a few of these in popular packages, and see why developers made those changes.
 
+** Jon **: What about cases where the install script calls script B, then script B changes? This should still count as "change install script," right?
+
   Finally, what's the content of install scripts? Let's count command / word occurrences within install scripts. We'll only count a word once for every time it occurrs in any version of a package.
+
+** Jon **: What is the baseline for this? What can we conclude by seeing the counts?
 
   Note: for all the above, we should ignore beta versions, etc.
 
@@ -21,7 +25,6 @@
   
   Methodology: for each CVE with a patch, we can look at the time between the publish time of the CVE and the publish time of the patched version. We can then look at the distribution of times between CVE publication and fix.
   We can segment this on both the CVE side (severity, vector, etc.) and on the package side (popularity).
-
 
 - ~~How well are CVEs updated to track fixes or non-fixes to packages? {A, ???}~~ (Federico says they get updated, but do they really?)
 
